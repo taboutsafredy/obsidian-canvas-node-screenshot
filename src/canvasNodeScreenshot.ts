@@ -1,7 +1,10 @@
 import { CanvasNode } from "./@types/types";
 import * as HtmlToImage from "html-to-image";
 
-
+/**
+ * Capture and download a screenshot of a canvas node.
+ * @param {CanvasNode} node - The current node.
+ */
 export default async function screenshotNodeElement (node: CanvasNode) {
 
     const workspace: HTMLElement | null = document.querySelector("body");
@@ -14,6 +17,10 @@ export default async function screenshotNodeElement (node: CanvasNode) {
 
             const nodeDataURL: string = await HtmlToImage.toPng(currentNodeElement);
 
+            /**
+             * Create a screenshot downloader from dataURL.
+             * @param {string} dataURL - Node screenshot data URL.
+             */
             const downloadIt = (dataURL: string): void => {
                 
                 const downloaderLink = document.createEl("a");
