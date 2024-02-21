@@ -28,6 +28,4 @@ A plugin for [Obsidian](https://obsidian.md) that allows you to take screenshots
 
 ## Support
 
-If you find this plugin helpful and want to support my work, you can buy me a coffee on [Buy Me a Coffee](https://www.buymeacoffee.com/itsfredy).
-
-<a href="https://www.buymeacoffee.com/boninall"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=boninall&button_colour=6495ED&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
+If you find this plugin helpful and want to support my work, you can just **Star ⭐** this repository.
