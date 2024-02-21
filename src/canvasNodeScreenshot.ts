@@ -23,7 +23,7 @@ export default async function screenshotNodeElement (node: CanvasNode) {
              */
             const downloadIt = (dataURL: string): void => {
                 
-                const downloaderLink = document.createEl("a");
+                const downloaderLink = document.createElement("a");
                 downloaderLink.download = "canvas-node-screenshot.png";
                 downloaderLink.href = dataURL;
                 downloaderLink.click();
