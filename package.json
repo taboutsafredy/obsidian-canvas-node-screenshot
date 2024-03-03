@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-canvasshot-plugin",
+	"name": "obsidian-canvas-node-screenshots-plugin",
 	"version": "1.0.0",
-	"description": "This is a Obsidian plugin that take a screenshot of canvas node 📸.",
+	"description": "Capture node effortlessly with precision screenshot.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",

@@ -1,9 +1,9 @@
 {
 	"id": "canvas-node-screenshot",
-	"name": "Screenshot Node",
+	"name": "Node Screenshot",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "A node screenshot plugin for Canvas in Obsidian.",
+	"description": "Capture node effortlessly with precision screenshot.",
 	"author": "Fredy Taboutsa",
 	"authorUrl": "https://iamfredy.tech",
 	"isDesktopOnly": false
