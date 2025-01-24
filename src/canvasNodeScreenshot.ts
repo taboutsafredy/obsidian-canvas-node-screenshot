@@ -16,7 +16,7 @@ export default async function screenshotNodeElement (node: CanvasNode) {
         try {
 
             const nodeDataURL: string = await HtmlToImage.toPng(currentNodeElement);
-            const downloadedFileName: string = node?.file?.name?.split(".")?.[0] ?? "canvas-node-screenshot.png";
+            const downloadedFileName: string = node?.file?.basename ?? "canvas-node-screenshot.png";
 
             /**
              * Create a screenshot downloader from dataURL.
