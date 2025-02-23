@@ -12,23 +12,24 @@ export default async function screenshotNodeElement (node: CanvasNode) {
     const canvasBackgroundColor: string = workspace?.classList.contains("theme-light") ? "#ffffff" : "#1e1e1e";
 
     if (currentNodeElement) {
-        
+
         try {
 
             const nodeDataURL: string = await HtmlToImage.toPng(currentNodeElement);
+            const downloadedFileName: string = node?.file?.basename ?? "canvas-node-screenshot.png";
 
             /**
              * Create a screenshot downloader from dataURL.
              * @param {string} dataURL - Node screenshot data URL.
              */
             const downloadIt = (dataURL: string): void => {
-                
+
                 const downloaderLink = document.createElement("a");
-                downloaderLink.download = "canvas-node-screenshot.png";
+                downloaderLink.download = downloadedFileName;
                 downloaderLink.href = dataURL;
                 downloaderLink.click();
             }
-            
+
             const screenshot = new Image();
             screenshot.src = nodeDataURL;
 
@@ -44,7 +45,7 @@ export default async function screenshotNodeElement (node: CanvasNode) {
                 canvas.height = height;
 
                 if (context) {
-                    
+
                     context.fillStyle = canvasBackgroundColor;
                     context.fillRect(0, 0, width, height);
 
@@ -59,15 +60,15 @@ export default async function screenshotNodeElement (node: CanvasNode) {
                 } else {
                     console.error("Canvas Context not found !");
                 }
-                
+
             }
-            
+
         } catch (error) {
             console.error("Error capturing screenshot: ", error);
         }
 
     } else {
         console.error("Node Element not found !");
-    }  
-    
+    }
+
 }
